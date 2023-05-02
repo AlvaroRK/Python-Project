@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    {% extends 'layouts/base.html' %} {% block content %}
+    <h1>MIS POSTS</h1>
+    {% for post in posts %}
+    <div style="background-color: aqua">
+        <h1>Titulo: {{post.titulo}}</h1>
+        <h2>Contenido: {{post.contenido}}</h2>
+        <h3>Categoría: {{post.categoria}}</h3>
+        <p>Autor: {{post.autor}}</p>
+
+        <div style="background-color: rgb(90, 230, 25);">
+            <h2>Comentarios de la publicacion:</h2>
+            {% for comment in comentarios %}
+                {% if comment.post_id == post.id %}
+                    <p>{{comment.comentario}}</p>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+
+    {% endfor %}
+    {% endblock %}
+  </body>
+</html>
