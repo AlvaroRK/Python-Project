@@ -1,8 +1,0 @@
-setup.py
-2daPre_entrega.egg-info/PKG-INFO
-2daPre_entrega.egg-info/SOURCES.txt
-2daPre_entrega.egg-info/dependency_links.txt
-2daPre_entrega.egg-info/top_level.txt
-paquete_1/__init__.py
-paquete_1/moduleClient.py
-paquete_1/moduleLogin.py
